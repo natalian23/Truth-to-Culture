@@ -59,31 +59,8 @@ export default function HomePage() {
               'radial-gradient(85% 60% at 78% 6%,rgba(191,211,222,.17),transparent 68%),radial-gradient(50% 40% at 8% 96%,rgba(191,211,222,.08),transparent 70%)',
           }}
         />
-        <svg
-          id="hero-rings"
-          viewBox="0 0 260 140"
-          aria-hidden="true"
-          style={{
-            position: 'absolute',
-            right: '6vw',
-            top: '16vh',
-            width: 'min(30vw,380px)',
-            height: 'auto',
-            opacity: 0.14,
-            pointerEvents: 'none',
-            transition: 'transform .25s ease-out',
-          }}
-        >
-          <circle cx="98" cy="70" r="46" fill="none" stroke="#F4F2ED" strokeWidth="3" />
-          <circle cx="162" cy="70" r="46" fill="none" stroke="#BFD3DE" strokeWidth="3" />
-          <g fill="#F4F2ED">
-            {[34, 52, 70, 88, 106].map((cy) => (
-              <circle key={cy} cx="130" cy={cy} r="2.4" />
-            ))}
-          </g>
-        </svg>
-
-        <div style={{ alignSelf: 'center', position: 'relative', paddingTop: 84 }}>
+        {/* paddingBottom keeps the tagline row clear of the CTAs on short viewports. */}
+        <div style={{ alignSelf: 'center', position: 'relative', paddingTop: 84, paddingBottom: 56 }}>
           <div
             className="mono"
             style={{
@@ -96,8 +73,6 @@ export default function HomePage() {
               flexWrap: 'wrap',
             }}
           >
-            <span>Rita Wright</span>
-            <span>·</span>
             <span>Courses · App · Reading Room</span>
           </div>
 
@@ -224,8 +199,6 @@ export default function HomePage() {
             Six minutes
             <br />
             a day.
-            <br />
-            No arrival.
           </h2>
           <p
             style={{

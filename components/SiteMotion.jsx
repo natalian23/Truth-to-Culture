@@ -99,9 +99,6 @@ export default function SiteMotion() {
 
     /* ---------- pointer ---------- */
     const onMouseMove = (e) => {
-      const cx = e.clientX / window.innerWidth - 0.5;
-      const cy = e.clientY / window.innerHeight - 0.5;
-
       const glow = document.getElementById('cursor-glow');
       if (glow) {
         glow.style.left = `${e.clientX}px`;
@@ -109,12 +106,6 @@ export default function SiteMotion() {
       }
 
       if (reduced) return;
-
-      const rings = document.getElementById('hero-rings');
-      if (rings) {
-        rings.style.transform =
-          `translate(${cx * -36}px,${cy * -26 - window.scrollY * 0.12}px) rotate(${cx * 6}deg)`;
-      }
 
       const phone = document.getElementById('phone-mock');
       if (phone) {
@@ -149,11 +140,6 @@ export default function SiteMotion() {
       });
 
       if (reduced) return;
-
-      const rings = document.getElementById('hero-rings');
-      if (rings && window.scrollY < window.innerHeight * 1.4) {
-        rings.style.transform = `translateY(${-window.scrollY * 0.12}px)`;
-      }
 
       const num = document.getElementById('mark-bg-num');
       if (num) {
