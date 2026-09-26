@@ -18,7 +18,7 @@ const STORIES = [
   },
   {
     tag: 'STUDENT · SEASON 2',
-    quote: 'Six minutes a day sounded too small to matter. It’s the first thing I’ve ever kept.',
+    quote: 'Five minutes a day sounded too small to matter. It’s the first thing I’ve ever kept.',
     who: 'PLACEHOLDER',
   },
   {

@@ -23,7 +23,7 @@ const WORLD = [
   {
     kicker: 'THE READING ROOM',
     title: 'Essays that feed the work',
-    body: 'Rita writes between the lessons. Three years of essays from the Substack, free to read, straight into your inbox if you want them.',
+    body: 'Rita writes between the lessons. Three years of essays from her Substack, free to read, straight into your inbox if you want them.',
     cta: 'START READING →',
     href: '/reading',
   },
@@ -196,7 +196,7 @@ export default function HomePage() {
             className="display"
             style={{ fontSize: 'clamp(48px,6.4vw,96px)', lineHeight: 0.88 }}
           >
-            Six minutes
+            Five minutes
             <br />
             a day.
           </h2>

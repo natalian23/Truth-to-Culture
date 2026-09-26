@@ -35,7 +35,7 @@ export default function SubscribeBand() {
           Get the essays in your inbox
         </div>
         <div style={{ marginTop: 6, fontSize: 14, color: 'var(--ink-55)' }}>
-          Free, from the Substack. Practical tools that turn truth into action.
+          Free, from her Substack. Practical tools that turn truth into action.
         </div>
       </div>
       <form onSubmit={submit} style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>

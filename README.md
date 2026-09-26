@@ -73,6 +73,17 @@ Rita's Substack **is the CMS**. `lib/substack.js` fetches
 If the feed is unreachable at build time the page falls back to archive placeholders, so a bad
 network never ships an empty room. Override the feed with `SUBSTACK_FEED_URL`.
 
+## The app's season builder — `POST /api/season`
+
+The companion app sends a finished intake here and gets back which of Rita's five
+elements ran loudest, with the person's own words quoted back (`lib/season.js`,
+Claude with structured output). The API key never leaves the server.
+
+- Set `ANTHROPIC_API_KEY` in Vercel → Settings → Environment Variables. Without it
+  the route answers 503 and the app quietly falls back to its on-device pass.
+- Optional `SEASON_API_TOKEN`: if set, requests must carry it as `x-ttc-token`.
+- Cost is roughly a cent or two per intake.
+
 ## Before launch — still to wire
 
 1. **App store links** — the App Store / Google Play buttons on `/` are `href="#"` placeholders,
